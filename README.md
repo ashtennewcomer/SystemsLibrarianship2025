@@ -6,7 +6,7 @@ This is a practice exercise for week 3 of the systems librarianship class.
 > "Of the specialist positions that exist in libraries, none is as underexamined as those of the systems librarians—the people who identify the needs of the library for automated systems, cause these systems to be implemented, and analyze the operations of the library." -Susan K. Martin
 
 ---
-### What is a systems librarian?
+### What does a systems librarian do?
 Systems librarians can have a wide variety of responsibilities which may include:
 * Integrated library system management
 * Website designing
