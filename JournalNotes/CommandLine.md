@@ -40,3 +40,7 @@ This is a backlog of notes from week 02.
 * `date +%F` provides the current date in `year-month-day` format
   * Can create a file using this code; ex: `nano $(date +%F).md`
 * `clear` will clear the screen in terminal
+* bash completion will autofill file names
+  *ex: if you only have one file starting with an`o`, you can type `o` and press tab to autocomplete the file name
+  *ex: `grep "chrome" o` -> `grep "chrome" operating-systems.csv`
+* Use the up arrow to autofill previous commands you have entered
