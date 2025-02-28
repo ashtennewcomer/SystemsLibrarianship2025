@@ -7,6 +7,7 @@ Yaz is an information retrieval client that uses protocols to query bibliographi
 To install: `sudo apt install yaz`
 
 Manual page: `man yaz-client`
+
 Bibliographic attributes page: `man bib1-attr`
 
 Running yaz:
@@ -23,7 +24,7 @@ Searching with yaz:
   * `1=21` subject heading field
   * `1=1016` any field
 * `show #` displays the result record
-  * `show 1 + # of results to show all records
+  * `show 1 + # of results` to show all records
 * `ctrlL` clear screen
 * `ctrlC` exit yaz client
 * `file` prints file type
@@ -45,5 +46,5 @@ Advanced Usage
 * use jq command to examine specific fields in the JSON-formatted MARC records
 * `json` converts files to a standard text-based format for representing structured data
 * `jq` formats json for better readability
-  * [jq tutorial] (https://jqlang.org/tutorial/) 
+  * [jq tutorial](https://jqlang.org/tutorial/) 
 
