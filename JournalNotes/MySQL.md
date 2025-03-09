@@ -42,18 +42,17 @@ MySQL is a relational database management system and I configured it to work wit
   * `use opacdb;`
 13. Created and defined new table:
   * ```create table books (
-        id int unsigned not null auto_increment,
-        author varchar(150) not null,
-        title varchar(150) not null,
-        copyright year(4) not null,
-        primary key (ID)
-);```
+    id int unsigned not null auto_increment,
+    author varchar(150) not null,
+    title varchar(150) not null,
+    copyright year(4) not null,
+    primary key (ID));```
 14. Added records into the table:
   * ```insert into books (author, title, copyright) values
-('Jennifer Egan', 'The Candy House', '2022'),
-('Imbolo Mbue', 'How Beautiful We Were', '2021'),
-('Lydia Millet', 'A Children\'s Bible', '2020'),
-('Julia Phillips', 'Disappearing Earth', '2019');```
+    ('Jennifer Egan', 'The Candy House', '2022'),
+    ('Imbolo Mbue', 'How Beautiful We Were', '2021'),
+    ('Lydia Millet', 'A Children\'s Bible', '2020'),
+    ('Julia Phillips', 'Disappearing Earth', '2019');```
   * I messed this part up and accidentally duplicated a line when I was trying to use the up arrow to use a previous command. I knew I could delete the line but I didn't like that the ID numbers would be messed up. I ended up googling how to delete the entire table using `DROP` and redid this section.
 15. Tested commands using the supplied commands in the textbook (not going to type all of that out again)
   * Some of these commands altered the table by adding a publisher field; I then added the publisher information for each book
@@ -65,26 +64,25 @@ MySQL is a relational database management system and I configured it to work wit
   * `sudo systemctl restart mysql`
 18. Created `login.php` file in document root's parent directory and changed the group ownership and permissions:
   * ```cd /var/www
-sudo touch login.php
-sudo chmod 640 login.php
-sudo chown :www-data login.php
-ls -l login.php
-sudo nano login.php```
+    sudo touch login.php
+    sudo chmod 640 login.php
+    sudo chown :www-data login.php
+    ls -l login.php
+    sudo nano login.php```
 19. Added content to the file using `nano`:
-  *```<?php // login.php
-$db_hostname = "localhost";
-$db_database = "opacdb";
-$db_username = "opacuser";
-$db_password = "XXXXXXXXX";
-?>
-```
+  * ```<?php // login.php
+    $db_hostname = "localhost";
+    $db_database = "opacdb";
+    $db_username = "opacuser";
+    $db_password = "XXXXXXXXX";\
+    ?>```
 20. Created a file titled `opac.php` in `/var/www/html`:
   * `cd /var/www/html`
   * `sudo nano opac.php`
 21. Copied code from textbook into the `opac.php` file and saved
 22. Tested syntax:
   * `sudo php -f /var/www/login.php`
-  * sudo php -f /var/www/html/opac.php`
+  * `sudo php -f /var/www/html/opac.php`
 22. Tested the site by visiting `http://34.29.236.71/opac.php`
   * Site was functional and correct
 
