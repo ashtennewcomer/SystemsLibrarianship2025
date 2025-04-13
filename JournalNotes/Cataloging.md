@@ -1,6 +1,6 @@
 # Log Entry
 
-** April 13, 2025 **
+**April 13, 2025**
 
 In week 11, I created a cataloging module for my website. This was a very simplified cataloging fucntion that allowed me to enter new book records into my database. Real-world cataloging modules would contain much more information and would include features like MARC to format the authority and bibliographic records and content to make it more graphically attractive such as images and formatting. 
 
