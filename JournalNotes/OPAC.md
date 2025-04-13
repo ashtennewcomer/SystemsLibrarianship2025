@@ -70,37 +70,39 @@ In a prior module, I created a MySQL database called `opacdb` which contains a t
 ```
 5. Create PHP script: `sudo nano search.php`
 6. Enter the following code into `search.php`:
-   ``` <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Results</title>
-<style>
-    table {
+   ```
+   <!DOCTYPE html>
+    <html lang="en">
+     <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Search Results</title>
+      <style>
+       table {
         border-collapse: collapse;
         width: 100%;
-    }
-    th, td {
+        }
+      th, td {
         border: 1px solid black;
         padding: 8px;
         text-align: left;
-    }
-</style>
-</head>
-<body>
+      }
+      </style>
+     </head>
+     <body>
 
-    <h1>Search Results</h1>
+      <h1>Search Results</h1>
 
-    <?php
-    // Load MySQL credentials
-    require_once '/var/www/login.php';
+      <?php
+      // Load MySQL credentials
+      require_once '/var/www/login.php';
 
-    // Enable MySQL error reporting
-    mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+      // Enable MySQL error reporting
+      mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
-    // Establish connection
-    $conn = new mysqli($db_hostname, $db_username, $db_password, $db_database);
+      // Establish connection
+      $conn = new mysqli($db_hostname, $db_username, $db_password, 
+     $db_database);
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
@@ -150,14 +152,15 @@ In a prior module, I created a MySQL database called `opacdb` which contains a t
 
 </body>
 </html>
-```
+
 This code establishes the connection between the website and MySQL. The code includes a prepared statement to search the database and inputs the variables that the user enters on the website. If the executed command returns results, the code tells it how to display the results.
 
 7. Test the website to make sure the OPAC is functioning: `http://34.29.236.71/mylibrary.html`
 8. Modify `books` table:
   * Log in as `opacuser`: `mysql -u opacuser -p`
-  * ``` insert into books
-(author, title, publisher, copyright) values
-('Emma Donoghue', 'Room', 'Little, Brown \& Company', '2010'),
-('Zadie Smith', 'White Teeth', 'Hamish Hamilton', '2000');
-```
+  * ```
+    insert into books
+     (author, title, publisher, copyright) values
+     ('Emma Donoghue', 'Room', 'Little, Brown \& Company', '2010'),
+     ('Zadie Smith', 'White Teeth', 'Hamish Hamilton', '2000');
+    ```
