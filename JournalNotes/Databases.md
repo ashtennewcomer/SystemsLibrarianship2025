@@ -102,3 +102,12 @@ Other commands:
   * Query user table: `select user, host from mysql.user;`
   * Delete database: `drop database DinnerDB;`
   * Delete user: `drop user 'sean'@'localhost';`
+
+Notes from Teams discussion:
+  * `le` brings up a command line editor
+  * `lg` executes command typed in editor
+  * To set up preferred editor: `export EDITOR = nano`
+  * To check: `echo $EDITOR`
+  * When editor opens, insert MhySQL prompt and save
+  * I was able to set up my preferred command line editor, but had trouble saving so I could execute the command. I tried researching this online but couldn't find anything to help.
+  
